@@ -16,7 +16,7 @@ export class WordpressService {
     return this.http.get<any>(url);
   }
 
-  getPosts(per_page: number = 100, page: number = 1){
+  getPosts(per_page: number = 10, page: number = 1){
     var url = 'https://vegan.ch/wp-json/wp/v2/posts?' + "&per_page=" + per_page + "&page=" + page;
 
     return this.http.get<any>(url);

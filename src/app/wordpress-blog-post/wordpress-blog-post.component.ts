@@ -19,8 +19,10 @@ export class WordpressBlogPostComponent implements OnInit {
   ngOnInit(): void {
 
     this.route.queryParams.subscribe(params => {
-      console.log(params);
-      this.wordpressBlogPostId = params['id'];
+
+      if(typeof params['id'] !== "undefined"){
+          this.wordpressBlogPostId = params['id'];
+      }
     });
 
     this.wordpressService.getPost(this.wordpressBlogPostId).subscribe((response: WordpressBlogPost) => {
