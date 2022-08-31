@@ -28,6 +28,7 @@ export class WordpressBlogPostComponent implements OnInit {
     this.wordpressService.getPost(this.wordpressBlogPostId).subscribe((response: WordpressBlogPost) => {
       console.log(response);
       this.wordpressBlogPost = response;
+
     });
 
   }
