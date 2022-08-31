@@ -1,0 +1,24 @@
+<div class="container">
+  <div *ngFor="let post of wordpressBlogPosts">
+
+    <div class="row">
+      <div class="col-6">
+        <h2>{{post["title"]["rendered"]}}</h2>
+        <p>
+          {{post['yoast_head_json']['description']}}
+        </p>
+        <p>
+          <a class="btn btn-primary" routerLink="/wordpress-blog-post" [queryParams]="{id: post['id']}" role='button'>Lesen</a>
+        </p>
+      </div>
+      <div class="col-6">
+        <img src="{{post['yoast_head_json']['og_image'][0]['url']}}" class="img-fluid my-4">
+
+      </div>
+    </div>
+
+
+
+      <hr>
+  </div>
+</div>

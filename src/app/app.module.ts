@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WordpressBlogPostComponent } from './wordpress-blog-post/wordpress-blog-post.component';
+import { WordpressBlogPostsComponent } from './wordpress-blog-posts/wordpress-blog-posts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     NavbarComponent,
-    WordpressBlogPostComponent
+    WordpressBlogPostComponent,
+    WordpressBlogPostsComponent
   ],
   imports: [
     BrowserModule,

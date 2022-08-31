@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { WordpressService } from '../wordpress.service';
 import { WordpressBlogPost } from '../wordpress-blog-post';
 
@@ -13,9 +14,14 @@ export class WordpressBlogPostComponent implements OnInit {
 
   wordpressBlogPost: WordpressBlogPost | undefined = undefined;
 
-  constructor(private wordpressService: WordpressService) { }
+  constructor(private wordpressService: WordpressService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    this.route.queryParams.subscribe(params => {
+      console.log(params);
+      this.wordpressBlogPostId = params['id'];
+    });
 
     this.wordpressService.getPost(this.wordpressBlogPostId).subscribe((response: WordpressBlogPost) => {
       console.log(response);
