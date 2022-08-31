@@ -12,20 +12,6 @@ export class RemoveAttributeDirective {
     //document.querySelector('font[size]').removeAttr('size');
     console.log(this.el.nativeElement);
 
-    var descendents = this.el.nativeElement.getElementsByTagName('*');
-
-    console.log(descendents);
-
-    var i, e, d;
-    for (i = 0; i < descendents.length; ++i) {
-        e = descendents[i];
-        e.removeAttribute('style');
-        e.removeAttribute('width');
-        e.removeAttribute('align');
-    }
-
-
-
     }
 
  }
