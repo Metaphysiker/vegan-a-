@@ -1,0 +1,12 @@
+<div class="container" *ngIf="wordpressBlogPost">
+
+  <div class="text-center">
+    <h1>{{wordpressBlogPost["title"]["rendered"]}}</h1>
+
+    <img src="{{wordpressBlogPost['yoast_head_json']['og_image'][0]['url']}}" class="img-fluid my-4">
+  </div>
+
+  <div innerHTML='{{wordpressBlogPost["content"]["rendered"]}}'></div>
+
+    <a href="{{wordpressBlogPost['link']}}">{{wordpressBlogPost['link']}}</a>
+</div>
